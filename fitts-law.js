@@ -109,8 +109,10 @@ var fittsTest = {
 	currentPosition: 0,
 	currentCount: 0,
 	miss: 0,
+    hits: 0,
+    
 //	isoLimits: {minD: 120, maxD: 300, minW:10 , maxW: 100},
-    isoLimits: {minD: 120, maxD: 300, minW:10 , maxW: 20},
+    isoLimits: {minD: 200, maxD: 300, minW:10 , maxW: 20},
 //	isoParams: {num: 9, distance: 200, width: 50, randomize: true},
 	isoParams: {num: 9, distance: 200, width: 15, randomize: true},
 //	isoParams: {num: 9, distance: 350, width: 40, randomize: false},
@@ -261,6 +263,8 @@ var fittsTest = {
 		else {
 			this.miss++;
 		}
+        d3.select("#num_datapoints").text(this.hits);
+
 	},
 	
 	mouseMoved: function(x, y) {
@@ -305,6 +309,9 @@ var fittsTest = {
 	},
 	
 	addDataPoint: function(data) {
+        
+        this.hits++;
+        
 		// add point to data array for plotting into ID/time scatter plot
 		if (this.active == false)
 			return;
@@ -643,7 +650,8 @@ var fittsTest = {
             // Average throughput
             var mThroughput = mean(newData, function(d) { return d.throughput; }).toFixed(2);
 //            console.log("Average thoughput = " + mThroughput);
-            document.getElementById("mean_throughput").innerHTML = mThroughput;
+//            document.getElementById("mean_throughput").innerHTML = mThroughput;
+            d3.select("#mean_throughput").text(mThroughput)
             
             
 			// ============== histogram ====================
