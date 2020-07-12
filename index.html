@@ -17,10 +17,10 @@
 	<body>
 
 		<div class="container_12">
-			<h1 class="prefix_1 grid_9">Fitts's Law Tester</h1>
+<!--			<h1 class="prefix_1 grid_9">Fitts's Law Tester</h1>-->
 			<div class="prefix_1 grid_7">
 				<p>
-					Simplified version of the <a href="http://simonwallner.at/ext/fitts/">Fitts's Law Tester</a>.
+					Simplified version of the <a href="http://simonwallner.at/ext/fitts/">Fitts's Law Tester</a>. Try to click the red circle as fast as possible but at the same time try to avoid errors.
 				</p>
 
 			</div>
@@ -28,9 +28,10 @@
 			<div class="clear"></div>
 
 			<div class="prefix_1 grid_7">
-                <p class="caption">
-					Try to click the red circle as fast as possible but at the same time try to avoid errors.
-				</p>
+                <div style="float:left;">
+					Mean effective throughput:
+				</div>
+                <div id="mean_throughput" class="sans">NA</div>
 				<div id="test-area" class="sans"></div>
 			</div>
 <!--
@@ -118,15 +119,19 @@
 -->
                 
                 
+<!--
                 <h2 style="margin-top: 2em;">Mean effective throughput</h2>
                 <p id="mean_throughput" class="sans">NA</p>
+-->
                 
+<!--
                 <h2 style="margin-top: 2em;">Histogram of effective throughput</h2>
 				<div id="throughput" class="sans"></div>
                 
                 <h2 style="margin-top: 2em;">Time in ms over effective ID</h2>
 				<div id="scatterEffective" class="sans"></div>
 				
+-->
 
 
 				
