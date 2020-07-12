@@ -110,7 +110,8 @@ var fittsTest = {
 	currentCount: 0,
 	miss: 0,
 	isoLimits: {minD: 120, maxD: 300, minW:10 , maxW: 100},
-	isoParams: {num: 9, distance: 200, width: 50, randomize: true},
+//	isoParams: {num: 9, distance: 200, width: 50, randomize: true},
+	isoParams: {num: 9, distance: 300, width: 40, randomize: false},
 	
 	currentPath: [],
 	active: false,
@@ -637,12 +638,18 @@ var fittsTest = {
 			}
 				
 
+            // Average throughput
+            var mThroughput = mean(newData, function(d) { return d.throughput; }).toFixed(2);
+//            console.log("Average thoughput = " + mThroughput);
+            document.getElementById("mean_throughput").innerHTML = mThroughput;
+            
+            
 			// ============== histogram ====================
 			var histThroughput = d3.layout.histogram()
 				.bins(20)
 				.range([0,10])
 				.value(function(d){return d.throughput;})
-				
+
 			var throughputHistogramData = histThroughput(newData)
 			
 	//		histYMax = d3.max(throughputHistogramData, function(d) { return d.y; });
