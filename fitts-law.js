@@ -22,11 +22,11 @@
 //d3.select("#usa").text(txt);
 
 // Set zoom level to basline of 450px height
-if (window.screen.height > 450) {
-    var ratio = window.screen.height / 450;
-    ratio = Math.min(ratio, 2);
-    $("body").css("zoom", ratio);
-}
+//if (window.screen.height > 450) {
+//    var ratio = window.screen.height / 450;
+//    ratio = Math.min(ratio, 2);
+//    $("body").css("zoom", ratio);
+//}
 
 
 /**
