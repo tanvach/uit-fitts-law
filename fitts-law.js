@@ -1,5 +1,34 @@
 "use strict";
 
+//var txt = "";
+//txt += "Browser CodeName: " + navigator.appCodeName + "\n";
+//txt += "Browser Name: " + navigator.appName + "\n";
+//txt += "Browser Version: " + navigator.appVersion + "\n";
+//txt += "Cookies Enabled: " + navigator.cookieEnabled + "\n";
+//txt += "Browser Language: " + navigator.language + "\n";
+//txt += "Browser Online: " + navigator.onLine + "\n";
+//txt += "Platform: " + navigator.platform + "\n";
+//txt += "User-agent header: " + navigator.userAgent + "\n";
+//txt += "Screen width: " + window.screen.width + "\n";
+//txt += "Screen height: " + window.screen.height + "\n";
+//txt += "Screen width: " + window.screen.width + "\n";
+//txt += "Screen height: " + window.screen.height + "\n";
+//txt += "Viewport width: " + $(window).width() + "\n";
+//txt += "Viewport height: " + $(window).height() + "\n";
+//txt += "Document width: " + $(document).width() + "\n";
+//txt += "Document height: " + $(document).height() + "\n";
+//
+////console.log(txt);
+//d3.select("#usa").text(txt);
+
+// Set zoom level to basline of 450px height
+if (window.screen.height > 450) {
+    var ratio = window.screen.height / 450;
+    ratio = Math.min(ratio, 2);
+    $("body").css("zoom", ratio);
+}
+
+
 /**
  * Create dimensions from the given values and store them for later use.
  * All values should be positive and make sense.
